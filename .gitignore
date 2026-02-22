@@ -1,0 +1,30 @@
+# Python
+*.pyc
+__pycache__/
+*~$
+*.bak
+
+# Virtual Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Database
+db.sqlite3
+*.log
+*.pot
+
+# Media and Static files (if generated and not source-controlled)
+media/
+static_collected/
+
+# IDE specific files
+# Example for VS Code:
+.vscode/
+# Example for PyCharm:
+.idea/
+
+# Secret/Local settings
+local_settings.py

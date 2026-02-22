@@ -1,0 +1,17 @@
+python3 -m venv env
+
+pip install Django
+
+pip freeze
+
+django-admin startproject todo_main .
+
+python manage.py runserver 8888
+
+
+ADMIN
+-------
+python manage.py migrate 
+    -> database migrate and now you can see the /admin page for admin login
+
+python manage.py createsuperuser    
