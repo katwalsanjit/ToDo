@@ -36,8 +36,9 @@
             <div class="card-body">
               {{ task.task }}
               <span style="position: relative; float: right;">
-                <a href="#" class="btn btn-success"><i class="fa fa-check"></i> Mark as
-                  Done</a>
+                <a href="{% url 'markAsDone' task.pk %}" class="btn btn-success">
+                  <i class="fa fa-check"></i> Mark as Done
+                </a>
                 <a href="#" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                 <a href="#" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
               </span>
@@ -48,17 +49,19 @@
       <div class="col-md-5 col-lg-5">
         <h5>Completed Tasks</h5>
         <!-- List of all the tasks that have completed -->
-      
+      {% for compted_task in completed_tasks %}
         <div class="card m-1">
           <div class="card-body">
-           
+            {{ compted_task.task }}
             <span style="position: relative; float: right;">
-              <a href="#" class="btn btn-danger">
+              <a href="{% url 'markAsUnDone' compted_task.pk %}" class="btn btn-danger">
                 <i class="fa fa-times"></i> Mark as
                 Undone</a>
             </span>
+            
           </div>
         </div>
+      {% endfor %}
        
       </div>
     </div>
