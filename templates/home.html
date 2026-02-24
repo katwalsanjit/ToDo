@@ -39,8 +39,8 @@
                 <a href="{% url 'markAsDone' task.pk %}" class="btn btn-success">
                   <i class="fa fa-check"></i> Mark as Done
                 </a>
-                <a href="#" class="btn btn-danger"><i class="fa fa-trash"></i></a>
-                <a href="#" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+                <a href="{% url 'deleteTask' task.id %}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                <a href="{% url 'editTask' task.id %}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
               </span>
             </div>
           </div>
